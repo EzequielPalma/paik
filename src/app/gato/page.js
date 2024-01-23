@@ -10,8 +10,10 @@ import Sky from '../components/Sky';
 import FrameGroup from '../components/FrameGroup';
 import ChartGroupGato from '../components/ChartGroupGato';
 import Navbar from '../components/Navbar';
-export default function page() {
-    const [rendered, setRendered] = useState(false);
+
+
+const Momo = () => {
+  const [rendered, setRendered] = useState(false);
 
   useEffect(() => {
     setRendered(true);
@@ -24,7 +26,6 @@ export default function page() {
   if (!rendered) {
     return <>loading</>;
   }
-
   return (
     <>
       <Navbar/>
@@ -42,3 +43,5 @@ export default function page() {
     </>
   )
 }
+
+export default Momo;
