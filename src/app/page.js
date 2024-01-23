@@ -1,5 +1,4 @@
 "use client"
-import 'aframe';
 
 import React, { useState, useEffect } from 'react';
 import Suelo from './components/Suelo';
