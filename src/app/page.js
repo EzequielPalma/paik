@@ -1,5 +1,6 @@
 "use client"
 
+
 import React, { useState, useEffect } from 'react';
 import Suelo from './components/Suelo';
 import Gato from './components/Gato';
@@ -55,6 +56,7 @@ const Home = () => {
 
 export default Home;
 
+const AFRAME = window.AFRAME;
 
 AFRAME.registerComponent('hello', {
   init: function () {
