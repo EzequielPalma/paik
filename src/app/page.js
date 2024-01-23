@@ -1,6 +1,5 @@
 "use client"
 
-
 import React, { useState, useEffect } from 'react';
 import Suelo from './components/Suelo';
 import Gato from './components/Gato';
@@ -30,7 +29,20 @@ const Home = () => {
     return <>loading</>;
   }
 
+  const AFRAME = window.AFRAME;
 
+  AFRAME.registerComponent('hello', {
+    init: function () {
+        var el = this.el; // Obtén la referencia al elemento
+  
+        // Agrega un evento de clic al elemento
+        el.addEventListener('click', function () {
+            console.log('Hello, World!');
+            alert('¡Hola! Al fin, joder!!!');
+        });
+    }
+  });
+  
 
   
 
@@ -56,19 +68,6 @@ const Home = () => {
 
 export default Home;
 
-const AFRAME = window.AFRAME;
-
-AFRAME.registerComponent('hello', {
-  init: function () {
-      var el = this.el; // Obtén la referencia al elemento
-
-      // Agrega un evento de clic al elemento
-      el.addEventListener('click', function () {
-          console.log('Hello, World!');
-          alert('¡Hola! Al fin, joder!!!');
-      });
-  }
-});
 
 
 
