@@ -5,7 +5,7 @@ const Joystick = () => {
   useEffect(() => {
     const loadJoystickControls = async () => {
       if (typeof window !== 'undefined') {
-        const nipplejs = await import('nipplejs');
+        const AFRAME = await import('AFRAME');
         
         if (!AFRAME.components['joystick-controls']) {
           AFRAME.registerComponent('joystick-controls', {
