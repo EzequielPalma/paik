@@ -37,7 +37,7 @@ const Home = () => {
   
      
       <Navbar />
-      <Joystick/>
+      {/* <Joystick/> */}
 
 
     
