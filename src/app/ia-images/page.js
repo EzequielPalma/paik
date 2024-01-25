@@ -4,7 +4,7 @@ import Sky from '../components/Sky';
 import Moon from '../components/Moon';
 import Navbar from '../components/Navbar';
 import Joystick from '../components/Joystick';
-import {Entity} from "aframe-react"
+
 
 const IaImages= () => {
     const [rendered, setRendered] = useState(false);
