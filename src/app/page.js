@@ -10,8 +10,14 @@ import Sky from './components/Sky';
 import FrameGroup from './components/FrameGroup';
 import ChartGroup from './components/ChartGroup';
 import Navbar from './components/Navbar';
-
 import Joystick from './components/Joystick';
+import {Entity} from "aframe-react"
+import Scriptc from './components/Script';
+import Script from 'next/script'
+
+
+
+
 
 const Home = () => {
   const [rendered, setRendered] = useState(false);
@@ -26,8 +32,8 @@ const Home = () => {
 
   if (!rendered) {
     return <>loading</>;
+    
   }
-
 
 
 
@@ -36,15 +42,20 @@ const Home = () => {
   
      
       <Navbar />
-      <Joystick/>
+      {/* <Joystick/> */}
 
+      <Script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"/>
 
     
-    <a-scene className="relative z-1" cursor="rayOrigin: mouse">
-    <a-camera position="-10 4 -10" joystick-controls="turnSpeed:3; moveSpeed:4; margin:80 80;"></a-camera>
+    <a-scene className="relative z-1" cursor="rayOrigin: mouse" joystick   >
+    <a-camera position="-10 4 -10" id="camera"></a-camera>
+
+    {/* <Entity primitive="a-camera"  look-controls="enabled: true" wasd-controls="enabled: true"  joystick>
+          <Entity primitive="a-box" position="-2 0 -2" rotation="0 45 0" color="#4CC3D9"  /> */}
+        {/* </Entity> */}
       <Suelo/>
       <Gato/>
-      <Grass/>
+      <Grass/>  
       <Moon/> 
       <ColumnsRec/>
       <FlowerGroup/>

@@ -20,6 +20,8 @@ const Joystick = () => {
               const THIS = this;
               this.move = { x: 0, y: 0 };
               this.dir = 1;
+              this.rot = this.el.getAttribute('rotation');
+              this.pos = this.el.getAttribute('position');
 
               const joyDiv = this.createJoyWrapper();
               this.joystick = nipplejs.create({
@@ -42,7 +44,7 @@ const Joystick = () => {
                 .on('end', (e, data) => {
                   // stop drag
                   AFRAME.ANIME({
-                    targets: this.move,
+                    targets: THIS.move,
                     x: 0,
                     y: 0,
                     duration: 1 / THIS.data.damping,
@@ -60,9 +62,6 @@ const Joystick = () => {
                   // drag down direction
                   THIS.dir = -1;
                 });
-
-              this.rot = this.el.getAttribute('rotation');
-              this.pos = this.el.getAttribute('position');
             },
             createJoyWrapper() {
               const wrapper = document.createElement('div');
@@ -84,15 +83,16 @@ const Joystick = () => {
               document.head.appendChild(styleSheet);
             },
             tick: function () {
-              if (!this.moving) return;
+              if (this.moving) {
+                // Apply joystick rotation
+                this.rot.y -= (this.move.x * this.data.turnSpeed) / 200 * this.dir;
+                this.el.setAttribute('rotation', this.rot);
 
-              this.rot.y -= (this.move.x * this.data.turnSpeed) / 200 * this.dir;
-              this.el.setAttribute('rotation', this.rot);
-
-              const speed = (this.move.y * this.data.moveSpeed) / 2000;
-
-              this.pos.x -= speed * Math.sin((this.rot.y * Math.PI) / 180);
-              this.pos.z -= speed * Math.cos((this.rot.y * Math.PI) / 180);
+                // Apply joystick movement
+                const speed = (this.move.y * this.data.moveSpeed) / 2000;
+                this.pos.x -= speed * Math.sin((this.rot.y * Math.PI) / 180);
+                this.pos.z -= speed * Math.cos((this.rot.y * Math.PI) / 180);
+              }
             },
           });
         }
