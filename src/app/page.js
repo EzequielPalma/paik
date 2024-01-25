@@ -18,15 +18,16 @@ const Home = () => {
 
   useEffect(() => {
     setRendered(true);
-
+    let value;
     if (typeof window !== 'undefined') {
+      value = window.localStorage.getItem('key')
       require('aframe');
     }
   }, [setRendered]);
 
   if (!rendered) {
     return <>loading</>;
-  };
+  }
 
 
 
