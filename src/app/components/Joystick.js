@@ -1,12 +1,11 @@
+"use client"
+
 import { useEffect } from 'react';
 import nipplejs from 'nipplejs';
 
 
 const Joystick = () => {
-    let value
-if (typeof window !== 'undefined') {
-  value = window.localStorage.getItem('key')
-}
+  
   useEffect(() => {
     if (!AFRAME.components['joystick-controls']) {
       AFRAME.registerComponent('joystick-controls', {
