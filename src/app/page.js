@@ -11,8 +11,7 @@ import FrameGroup from './components/FrameGroup';
 import ChartGroup from './components/ChartGroup';
 import Navbar from './components/Navbar';
 import Joystick from './components/Joystick';
-import {Entity} from "aframe-react"
-import Scriptc from './components/Script';
+
 import Script from 'next/script'
 
 
