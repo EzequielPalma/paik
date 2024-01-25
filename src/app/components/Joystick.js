@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useEffect } from 'react';
 import nipplejs from 'nipplejs';
@@ -7,6 +7,9 @@ import nipplejs from 'nipplejs';
 const Joystick = () => {
   
   useEffect(() => {
+    const loadJoystickControls = async () => {
+      if (typeof window !== 'undefined') {
+        const nipplejs = await import('nipplejs');
     if (!AFRAME.components['joystick-controls']) {
       AFRAME.registerComponent('joystick-controls', {
         schema: {
