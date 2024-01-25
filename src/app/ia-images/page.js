@@ -4,6 +4,7 @@ import Sky from '../components/Sky';
 import Moon from '../components/Moon';
 import Navbar from '../components/Navbar';
 import Joystick from '../components/Joystick';
+import {Entity} from "aframe-react"
 
 const IaImages= () => {
     const [rendered, setRendered] = useState(false);
@@ -25,7 +26,7 @@ const IaImages= () => {
          
       <Navbar/>
       {/* <Joystick/> */}
-        <a-scene className="relative z-1" cursor="rayOrigin: mouse"  >
+        {/* <a-scene className="relative z-1" cursor="rayOrigin: mouse"  >
     <Entity primitive="a-camera"  look-controls="enabled: true" wasd-controls="enabled: true" joystick-controls="turnSpeed:3; moveSpeed:4; margin:80 80;">
           <Entity primitive="a-box" position="-2 0 -2" rotation="0 45 0" color="#4CC3D9"  />
         </Entity>
@@ -35,7 +36,7 @@ const IaImages= () => {
       <Sky/>    
            
       
-    </a-scene>
+    </a-scene> */}
     </>
   )
 }
