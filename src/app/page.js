@@ -11,7 +11,7 @@ import FrameGroup from './components/FrameGroup';
 import ChartGroup from './components/ChartGroup';
 import Navbar from './components/Navbar';
 
-// import Joystick from './components/Joystick';
+import Joystick from './components/Joystick';
 
 const Home = () => {
   const [rendered, setRendered] = useState(false);
