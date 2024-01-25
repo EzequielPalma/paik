@@ -13,7 +13,7 @@ export default function Moon() {
           position="30 120 150"
           rotation="0 190 0"
           obj-model="obj: #moon-obj"
-          scale="10 10 10">
+          scale="15 15 15">
         </a-entity></>
     )
 }

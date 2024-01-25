@@ -14,7 +14,7 @@ export default function Grass() {
 
       <a-entity
           id="grass"
-          material="src: images/grass/grass.jpg"
+          material="src: images/grass/grass.jpg; repeat: 2 2"
           position="0 -0.86 0"
           rotation="270 45 0"
           obj-model="obj: #grass-obj"

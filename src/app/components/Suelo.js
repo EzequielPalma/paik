@@ -6,6 +6,6 @@ export default function Suelo() {
        position="-1 0 0"
        rotation="0 45 0"
        scale="100 0.005 100"
-       material="src: images/wall/cinder.jpg; color: #696969; roughness: 1; metalness: 0">   </a-box>
+       material="src: images/wall/cinder.jpg; repeat: 20 20; color: #696969; roughness: 1; metalness: 0">   </a-box>
   )
 }

@@ -10,6 +10,7 @@ import Sky from '../components/Sky';
 import FrameGroup from '../components/FrameGroup';
 import ChartGroupGato from '../components/ChartGroupGato';
 import Navbar from '../components/Navbar';
+import Joystick from '../components/Joystick';
 
 
 const Momo = () => {
@@ -28,8 +29,11 @@ const Momo = () => {
   }
   return (
     <>
+     
       <Navbar/>
-      <a-scene cursor="rayOrigin: mouse">
+      <Joystick/>
+      <a-scene className="relative z-1" cursor="rayOrigin: mouse">
+      <a-camera position="-10 4 -10" joystick-controls="turnSpeed:3; moveSpeed:4; margin:80 80;"></a-camera>
         <Suelo/>
         <Gato/>
         <Grass/>

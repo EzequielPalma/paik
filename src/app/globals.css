@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  display: flex;
+  justify-content: center;
+}
 .navbarCn{
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  margin-bottom: 20px;
+  left: 0;
+}
+
+.botonGroup{
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -21,6 +33,14 @@
   justify-content: center;
 }
 
+.flechas{
+  background-color: #03162e; 
+  height: 60px;
+  width: 60px;
+  border-radius: 130px;
+  margin-top: 10px;
+ 
+}
 .imagenBoton{
   height: 55px;
   width: 55px;

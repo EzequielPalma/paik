@@ -1,5 +1,4 @@
 "use client"
-
 import React, { useState, useEffect } from 'react';
 import Suelo from './components/Suelo';
 import Gato from './components/Gato';
@@ -12,7 +11,7 @@ import FrameGroup from './components/FrameGroup';
 import ChartGroup from './components/ChartGroup';
 import Navbar from './components/Navbar';
 
-
+import Joystick from './components/Joystick';
 
 const Home = () => {
   const [rendered, setRendered] = useState(false);
@@ -27,30 +26,22 @@ const Home = () => {
 
   if (!rendered) {
     return <>loading</>;
-  }
+  };
 
-  const AFRAME = window.AFRAME;
 
-  AFRAME.registerComponent('hello', {
-    init: function () {
-        var el = this.el; // Obtén la referencia al elemento
-  
-        // Agrega un evento de clic al elemento
-        el.addEventListener('click', function () {
-            console.log('Hello, World!');
-            alert('¡Hola! Al fin, joder!!!');
-        });
-    }
-  });
-  
 
-  
 
   return (
     <>
-    <Navbar/>
+  
+     
+      <Navbar />
+      <Joystick/>
 
+
+    
     <a-scene className="relative z-1" cursor="rayOrigin: mouse">
+    <a-camera position="-10 4 -10" joystick-controls="turnSpeed:3; moveSpeed:4; margin:80 80;"></a-camera>
       <Suelo/>
       <Gato/>
       <Grass/>
@@ -72,31 +63,3 @@ export default Home;
 
 
 
-// // const AFRAME = window.AFRAME;
-
-// AFRAME.registerComponent('console', {
-//   init: function () {
-//   console.log("hola")
-//   }
-//   })
-
-// AFRAME.registerComponent('handle-events', {
-//   init: function () {
-//     var el = this.el;
-//     console.log(el)  //
-//     el.addEventListener('mouseenter', function () {
-//       console.log(el.getAttribute('data-info'));
-//       console.log("mouseenter");
-
-//     });
-//     el.addEventListener('mouseleave', function () {
-//         console.log(el.getAttribute('data-info'));
-//         console.log("mouseleave");
-//     });
-//     el.addEventListener('click', function () {
-//         console.log(el.getAttribute('data-info'));
-//         console.log("click");
-//         alert(el.getAttribute('data-info'));
-//     });
-//   }
-// });
