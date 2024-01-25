@@ -6,6 +6,13 @@ body{
   display: flex;
   justify-content: center;
 }
+
+#np{
+  border-radius: 200px;
+  width: 117px !important;
+  height: 117px !important;
+  right: unset !important;
+}
 .navbarCn{
   position: absolute;
   z-index: 2;
