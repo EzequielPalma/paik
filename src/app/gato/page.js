@@ -18,9 +18,8 @@ const Momo = () => {
 
   useEffect(() => {
     setRendered(true);
-    let value;
+
     if (typeof window !== 'undefined') {
-      value = window.localStorage.getItem('key')
       require('aframe');
     }
   }, [setRendered]);
@@ -28,6 +27,10 @@ const Momo = () => {
   if (!rendered) {
     return <>loading</>;
   }
+  const AFRAME = window.AFRAME;
+
+
+
   return (
     <>
      

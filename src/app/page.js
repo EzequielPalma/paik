@@ -18,9 +18,8 @@ const Home = () => {
 
   useEffect(() => {
     setRendered(true);
-    let value;
+
     if (typeof window !== 'undefined') {
-      value = window.localStorage.getItem('key')
       require('aframe');
     }
   }, [setRendered]);
@@ -29,6 +28,7 @@ const Home = () => {
     return <>loading</>;
   }
 
+  const AFRAME = window.AFRAME;
 
 
 
