@@ -12,7 +12,7 @@ import ChartGroup from './components/ChartGroup';
 import Navbar from './components/Navbar';
 import Joystick from './components/Joystick';
 
-import Script from 'next/script'
+// import Script from 'next/script'
 
 
 
@@ -43,7 +43,7 @@ const Home = () => {
       <Navbar />
       {/* <Joystick/> */}
 
-      <Script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"/>
+      {/* <Script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"/> */}
 
     
     <a-scene className="relative z-1" cursor="rayOrigin: mouse" joystick   >
