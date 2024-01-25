@@ -32,7 +32,7 @@ const Momo = () => {
     <>
      
       <Navbar/>
-      {/* <Joystick/> */}
+      <Joystick/>
       <a-scene className="relative z-1" cursor="rayOrigin: mouse">
       <a-camera position="-10 4 -10" joystick-controls="turnSpeed:3; moveSpeed:4; margin:80 80;"></a-camera>
         <Suelo/>
