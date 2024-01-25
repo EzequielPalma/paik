@@ -10,25 +10,25 @@ import Sky from './components/Sky';
 import FrameGroup from './components/FrameGroup';
 import ChartGroup from './components/ChartGroup';
 import Navbar from './components/Navbar';
-import "aframe";
+
 import Joystick from './components/Joystick';
 
 const Home = () => {
-  // const [rendered, setRendered] = useState(false);
+  const [rendered, setRendered] = useState(false);
 
-  // useEffect(() => {
-  //   setRendered(true);
+  useEffect(() => {
+    setRendered(true);
 
-  //   if (typeof window !== 'undefined') {
-  //     require('aframe');
-  //   }
-  // }, [setRendered]);
+    if (typeof window !== 'undefined') {
+      require('aframe');
+    }
+  }, [setRendered]);
 
-  // if (!rendered) {
-  //   return <>loading</>;
-  // }
+  if (!rendered) {
+    return <>loading</>;
+  }
 
-  // const AFRAME = window.AFRAME;
+  const AFRAME = window.AFRAME;
 
 
 
