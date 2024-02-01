@@ -12,6 +12,7 @@ import ChartGroupGato from '../components/ChartGroupGato';
 import Navbar from '../components/Navbar';
 import Script from 'next/script';
 import Grow from '../components/AframeComponents/Grow';
+import CameraEntity from '../components/CameraEntity';
 
 
 const Momo = () => {
@@ -42,10 +43,7 @@ const Momo = () => {
 
 
       <a-scene joystick  cursor="rayOrigin: mouse"    >
-        <a-camera position="0 5 0" rotation="-90 0 0" id="camera" >
-          <a-entity gltf-model="images/eze.glb" scale="2 2 2" rotation="0 180 0" position="-0.64 -5.56 -7.02" dynamic-body ></a-entity>
-        </a-camera>
-
+        <CameraEntity/>
         <Suelo/>
         <Gato/>
         <Grass/>
