@@ -13,7 +13,12 @@ export default function Moon() {
           position="30 120 150"
           rotation="0 190 0"
           obj-model="obj: #moon-obj"
-          scale="15 15 15">
+          scale="15 15 15"
+          animation="property: rotation; to: 0 0 0; dur: 9000; easing: linear; loop: true"
+          movimiento
+          cambiarColor
+          >
+            
         </a-entity></>
     )
 }

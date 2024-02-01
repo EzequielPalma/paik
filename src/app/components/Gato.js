@@ -13,10 +13,10 @@ const Gato = () => (
       rotation="270 0 180"
       obj-model="obj: #gato-obj"
       scale="0.025 0.025 0.025"
-      material="color: #25282A; roughness: 0.730; metalness:0.800"
-      hello
+      material="color: #25282A; roughness: 0.730; metalness:0.800"      
+      sound="src: url(images/maullido.mp3); on: click"
       >
-      </a-entity>
+    </a-entity>
 
   </>
 );

@@ -1,4 +1,6 @@
 "use client"
+
+
 import React, { useState, useEffect } from 'react';
 import Suelo from './components/Suelo';
 import Gato from './components/Gato';
@@ -10,59 +12,64 @@ import Sky from './components/Sky';
 import FrameGroup from './components/FrameGroup';
 import ChartGroup from './components/ChartGroup';
 import Navbar from './components/Navbar';
-import Joystick from './components/Joystick';
-
-// import Script from 'next/script'
-
-
-
+import Script from 'next/script'
+import Eze from './components/Eze';
+import AframeComponents from './components/AframeComponents/AframeComponents';
+import CameraEntity from './components/CameraEntity';
 
 
 const Home = () => {
+
   const [rendered, setRendered] = useState(false);
+
 
   useEffect(() => {
     setRendered(true);
 
     if (typeof window !== 'undefined') {
       require('aframe');
+      require("aframe-extras");
+
     }
   }, [setRendered]);
 
   if (!rendered) {
     return <>loading</>;
-    
+
   }
-
-
 
   return (
     <>
-  
-     
-      <Navbar />
-      {/* <Joystick/> */}
+     <Script src="https://aframe.io/releases/1.5.0/aframe.min.js"></Script>
+     <Script src="https://cdn.jsdelivr.net/gh/mrturck/aframe-joystick@master/joystick.min.js"/>
 
-      {/* <Script src="https://cdn.rawgit.com/mrturck/aframe-joystick/master/joystick.min.js"/> */}
+     <Navbar />
 
-    
-    <a-scene className="relative z-1" cursor="rayOrigin: mouse" joystick   >
-    <a-camera position="-10 4 -10" id="camera"></a-camera>
+     <AframeComponents/>
 
-    {/* <Entity primitive="a-camera"  look-controls="enabled: true" wasd-controls="enabled: true"  joystick>
-          <Entity primitive="a-box" position="-2 0 -2" rotation="0 45 0" color="#4CC3D9"  /> */}
-        {/* </Entity> */}
-      <Suelo/>
-      <Gato/>
-      <Grass/>  
-      <Moon/> 
-      <ColumnsRec/>
-      <FlowerGroup/>
-      <Sky/>    
-      <FrameGroup/>
-      <ChartGroup/>     
-      
-    </a-scene>
+
+     <a-scene joystick cursor="rayOrigin: mouse">
+
+        
+
+
+        <CameraEntity/>
+        <Eze />
+        <Suelo />
+        <Gato/>
+        <Grass />
+        <Moon />
+        <ColumnsRec />
+        <FlowerGroup />
+        <Sky />
+        <FrameGroup />
+        <ChartGroup />
+
+
+
+
+
+      </a-scene>
     </>
   );
 };

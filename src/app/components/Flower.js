@@ -4,6 +4,8 @@ const Flower= ({ position }) => (
         gltf-model="url(images/flower.glb)" 
         position={position}
         scale="2 2 2"
+        static-body
+       
     > 
         
     </a-entity>

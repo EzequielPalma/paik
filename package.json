@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.15.15",
+    "@types/three": "^0.160.0",
     "aframe": "^1.5.0",
     "aframe-extras": "^7.2.0",
+    "aframe-orbit-controls-component": "^1.0.0",
+    "aframe-physics-system": "^4.0.2",
     "framer-motion": "^10.18.0",
+    "leva": "^0.9.35",
     "next": "14.1.0",
     "nipplejs": "^0.10.1",
     "react": "^18",
     "react-aframe-ar": "^1.18.0",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.160.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
