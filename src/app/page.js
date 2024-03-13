@@ -43,12 +43,12 @@ const Home = () => {
      <Script src="https://aframe.io/releases/1.5.0/aframe.min.js"></Script>
      <Script src="https://cdn.jsdelivr.net/gh/mrturck/aframe-joystick@master/joystick.min.js"/>
 
-     <Navbar />
 
      <AframeComponents/>
 
 
      <a-scene joystick cursor="rayOrigin: mouse">
+     <Navbar />
 
         
 
